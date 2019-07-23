@@ -535,6 +535,11 @@
                 var header = document.getElementById('header');
                 console.log(layoutSelect.options[layoutSelect.selectedIndex].value);
                 console.log(cssnav.getAttribute('href'));
+                
+                if(window.innerWidth >= 1025) {
+                    header.style.boxShadow = 'inset 0 -52px #222, 0 2px 10px rgba(0,0,0,0.2)';
+                }
+                
                 layoutSelect.addEventListener('change', function() {
                     var selectedValue = layoutSelect.options[layoutSelect.selectedIndex].value;
                     console.log(selectedValue);
@@ -543,6 +548,11 @@
                         case 'classic':
                             cssnav.setAttribute('href', 'css/nav-grid-classic.css');
                             console.log('Classic template selected');
+                            if(colorSelect.options[colorSelect.selectedIndex].value == 'light' && window.innerWidth >= 1025) {
+                                header.style.boxShadow = 'inset 0 -52px #eee, 0 2px 10px rgba(0,0,0,0.2)';
+                            } else if(colorSelect.options[colorSelect.selectedIndex].value == 'dark' && window.innerWidth >= 1025) {
+                                header.style.boxShadow = 'inset 0 -52px #222, 0 2px 10px rgba(0,0,0,0.2)';
+                            }
                             break;
                         case 'condensed':
                             cssnav.setAttribute('href', 'css/nav-grid-condensed.css');
@@ -574,14 +584,18 @@
                     if(selectedValue == 'dark') {
                         cssnavcolor.setAttribute('href', 'css/nav-color-dark.css');
                         console.log('Dark theme selected');
-                        if(layoutSelect.options[layoutSelect.selectedIndex].value == 'narrow') {
+                        if(layoutSelect.options[layoutSelect.selectedIndex].value == 'narrow' && window.innerWidth >= 1025) {
                             header.style.boxShadow = 'inset 0 38px #222, 0 2px 10px rgba(0,0,0,0.2)';
-                        } 
+                        } else if(layoutSelect.options[layoutSelect.selectedIndex].value == 'classic' && window.innerWidth >= 1025) {
+                            header.style.boxShadow = 'inset 0 -52px #222, 0 2px 10px rgba(0,0,0,0.2)';
+                        }
                     } else {
                         cssnavcolor.setAttribute('href', 'css/nav-color-light.css');
                         console.log('Light theme selected');
-                        if(layoutSelect.options[layoutSelect.selectedIndex].value == 'narrow') {
+                        if(layoutSelect.options[layoutSelect.selectedIndex].value == 'narrow' && window.innerWidth >= 1025) {
                             header.style.boxShadow = 'inset 0 38px #eee, 0 2px 10px rgba(0,0,0,0.2)';
+                        } else if(layoutSelect.options[layoutSelect.selectedIndex].value == 'classic' && window.innerWidth >= 1025) {
+                            header.style.boxShadow = 'inset 0 -52px #eee, 0 2px 10px rgba(0,0,0,0.2)';
                         }
                     }
                 })
