@@ -181,10 +181,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom right, #777, #333);
     opacity: 0.6;
 }
 #main-message .grid-container {
+    position: relative;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
