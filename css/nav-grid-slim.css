@@ -37,6 +37,9 @@
 #nav-bar {
     grid-area: head-nav;
 }
+#nav-menu {
+    justify-content: flex-end;
+}
 
 /* Grid Settings */
 #header-grid {
