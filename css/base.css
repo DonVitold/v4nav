@@ -48,6 +48,7 @@
     width: 100%;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 #header.fixed-head {
@@ -170,6 +171,18 @@
     height:500px;
     background-image: url('../img/mm-1.jpg');
     background-size: cover;
+    position: relative;
+}
+#main-message::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom right, #777, #333);
+    opacity: 0.6;
 }
 #main-message .grid-container {
     height: 100%;
