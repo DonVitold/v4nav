@@ -539,6 +539,11 @@
                         case 'classic':
                             cssnav.setAttribute('href', 'css/nav-grid-classic.css');
                             console.log('Classic template selected');
+                            if(colorSelect.options[colorSelect.selectedIndex].value == 'light') {
+                                header.style.boxShadow = 'inset 0 -52px #eee';
+                            } else {
+                                header.style.boxShadow = 'inset 0 -52px #222';
+                            }
                             break;
                         case 'condensed':
                             cssnav.setAttribute('href', 'css/nav-grid-condensed.css');
@@ -546,7 +551,12 @@
                             break;
                         case 'narrow':
                             cssnav.setAttribute('href', 'css/nav-grid-narrow.css');
-                            console.log('narrow template selected');
+                            console.log('Narrow template selected');
+                            if(colorSelect.options[colorSelect.selectedIndex].value == 'light') {
+                                header.style.boxShadow = 'inset 0 38px #eee';
+                            } else {
+                                header.style.boxShadow = 'inset 0 38px #222';
+                            }
                             break;
                         case 'slim':
                             cssnav.setAttribute('href', 'css/nav-grid-slim.css');
