@@ -7,6 +7,9 @@
 /* ============================== NAVIGATION ============================== */
 
 /* === Mobile Menu Styling === */
+.pushbar {
+    background: #fff;
+}
 .oc-item {
     border-color: #e6e6e6;
 }
@@ -22,12 +25,13 @@
 }
 .oc-item.quote a {
     background-color: #17417c;
+    color: #fff;
 }
 .oc-item.quote a:hover {
     background-color: #f5821f;
 }
 .oc-close {
-    color: #444;
+    color: #17417c;
 }
 .oc-close:hover {
     color: #f5821f;
