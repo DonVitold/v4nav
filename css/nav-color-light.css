@@ -1,0 +1,75 @@
+/* ============================== HEADER ============================== */
+#header {
+    background-color: #fff;
+    color: #444;
+}
+
+/* ============================== NAVIGATION ============================== */
+
+/* === Mobile Menu Styling === */
+.oc-item {
+    border-color: #e6e6e6;
+}
+.oc-item a {
+    color:#17417c;
+}
+.oc-item a:hover {
+    color: #f5821f;
+}
+/* Expanded Menu BG */
+.oc-item ul {
+    background-color: rgba(0,0,0,0.1);
+}
+.oc-item.quote a {
+    background-color: #17417c;
+}
+.oc-item.quote a:hover {
+    background-color: #f5821f;
+}
+.oc-close {
+    color: #444;
+}
+.oc-close:hover {
+    color: #f5821f;
+}
+
+/* === Main Menu Styling === */
+#nav-bar {
+    background-color: transparent;
+}
+.menu-icon {
+    background-color: #17417c;
+}.menu-icon:hover {
+    background-color: #f5821f;
+}
+.menu-icon span {
+    background-color: #fff;
+}
+/* Change color of bars on hover
+.menu-icon:hover span {
+    background-color: #eee;
+} */
+
+/* Top Level Menu Button Styles */
+.nav-item > a {
+    color:#17417c;
+    background-color: transparent;
+    font-weight: bold;
+}
+.nav-item > a:hover {
+    background-color:#17417c;
+    color: #fff;
+}
+/* Nav dropdown lists */
+.nav-item > ul {
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.nav-item > ul a {
+    color:#17417c;
+    font-weight: bold;
+}
+.nav-item > ul a:hover {
+    color:#f5821f;
+    background-color: rgba(0,0,0,0.2);
+}

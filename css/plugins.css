@@ -1,0 +1,133 @@
+/* Popbox - Modal Popup */
+.popbox.visible{
+	opacity:1;
+	z-index: 999;
+    transition:opacity 0.3s ease;
+}
+.popbox.opened{
+	display: block;
+}
+
+.popbox_locked #template-wrap.popbox_blur{
+	filter:blur(5px);
+}
+
+html.popbox_locked{
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.popbox{
+	z-index: -999;
+	position: fixed;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+    will-change: opacity;
+    transition:opacity 0.3s ease;
+    opacity:0;
+    will-change: opacity;
+	background: rgba(51,51,51,0.5);
+	padding:20px;
+	padding-top:5%;
+	overflow-y: auto;
+	display: none;
+}
+
+.popbox_container{
+	margin: 0 auto 20px;
+	padding: 20px;
+	background:#fff;
+	max-width:400px;
+}
+
+/* Pushbar - Off-canvas Menu */
+.pushbar.opened{
+	display: block;
+}
+
+html.pushbar_locked{
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.pushbar_locked #template-wrap.pushbar_blur{
+	filter:blur(5px);
+}
+.pushbar{
+	z-index: 9999;
+	position: fixed;
+	will-change: transform;
+	overflow-y: auto;
+	transition:transform 0.5s ease;
+	will-change: transform;
+	background:#333;
+}
+.pushbar_overlay{
+	z-index: -999;
+	position: fixed;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	top: 0;
+	left: 0;
+    will-change: opacity;
+    transition:opacity 0.5s ease;
+    opacity:0;
+    will-change: opacity;
+	background: #555;
+}
+html.pushbar_locked .pushbar_overlay{
+	opacity:0.7;
+	z-index: 999;
+    transition:opacity 0.5s ease;
+}
+
+.pushbar.from_left{
+	top: 0;
+	left: 0;
+	width: 280px;
+	max-width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	transform: translateZ(0) translateX(-100%);
+}
+
+.pushbar.from_right{
+	top: 0;
+	right: 0;
+	width: 280px;
+	max-width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	transform: translateZ(0) translateX(100%);
+}
+
+.pushbar.from_top{
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	min-height: 150px;
+	transform: translateZ(0) translateY(-100%);
+}
+.pushbar.from_bottom{
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	min-height: 150px;
+	transform: translateZ(0) translateY(100%);
+}
+
+.pushbar.opened{
+	transform: translateX(0px) translateY(0px);
+}
+.pushbar.opened + #template-wrap {
+	transform: translateX(-280px);
+}

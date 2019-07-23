@@ -1,0 +1,83 @@
+/* ==================== Header Layout ==================== */
+/* Logo */
+#logo {
+    grid-area: head-logo;
+}
+/* Service Area */
+#header-service-area {
+    grid-area: head-service;
+}
+#header-service-area p {
+    font-size:12px;
+    text-align: left;
+}
+
+/* Phone & button boxes */
+#phone-wrap {
+    grid-area: head-phone;
+    text-align: center;
+}
+#phone {
+    font-size: 18px;
+}
+#phone-wrap .opensign span {
+    font: 400 10px/100% sans-serif;
+}
+
+#header-btn {
+    grid-area: head-button;
+    text-align: right;
+}
+@media screen and (min-width:520px) {
+    #phone-wrap {
+        text-align: right;
+    }
+}
+
+/*  Navigation  */
+#menu-icon-wrap {
+    grid-area: head-icon;
+    text-align: right;
+}
+#nav-bar {
+    grid-area: head-nav;
+}
+
+/* Grid Settings */
+#header-grid {
+    display:grid;
+    align-items: center;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    grid-template-areas:
+        "head-logo head-logo head-logo head-icon"
+        "head-phone head-phone head-phone head-phone";
+}
+@media screen and (max-width: 1024px) {
+    #header-service-area, #nav-bar, #header-btn {
+        display: none;
+    }
+}
+@media screen and (min-width: 520px) {
+    #header-grid {
+        grid-template-areas:
+            "head-logo head-phone head-phone head-icon";
+    }
+}
+@media screen and (min-width: 1025px) {
+    #menu-icon-wrap { display: none; }
+    #header-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "head-logo head-service head-service head-phone"
+            "head-logo head-nav head-nav head-nav";
+    }
+    #logo svg, #logo img {
+        height: 90px;
+        width: auto;
+    }
+    #header-btn {
+        display: none;
+    }
+}

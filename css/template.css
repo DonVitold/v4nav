@@ -1,0 +1,208 @@
+/* ============================== TYPOGRAPHY ============================== */
+
+/* ============================== BUTTONS & FORMS ============================== */
+.button {
+    font-weight: bold;
+}
+.button.secondary, .button-group.secondary .button {
+    background-color: #f5821f;
+    color: #fff;
+}
+#header-btn .button {
+    padding: 0.5em 1em;
+}
+/* ============================== COMPONENT STYLES ============================== */
+
+/* Tabs Styling */
+.tabs .super-toggle {
+    background-color: #eee;
+    color: #333;
+}
+.tabs .super-toggle:hover {
+    background-color: #f5821f;
+    color:#fff;
+}
+.tabs .super-content {
+    padding: 10px;
+    border: 1px solid #eee;
+}
+/* Accordion Styling */
+.acc .super-toggle {
+    background-color: #eee;
+    color: #333;
+}
+.acc .super-toggle:hover {
+    background-color: #17417c;
+    color: #fff
+}
+.acc .super-content {
+    padding: 10px;
+    border: 1px solid #eee;
+}
+/* Active toggle button styling */
+.super-toggle.selected, .acc .super-toggle.selected, .tabs .super-toggle.selected {
+    color: #fff;
+    background-color: #17417c;
+}
+
+/* ============================== HEADER ============================== */
+#header {
+    background-color: #333;
+    color: #fff;
+}
+#logo a {
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+#logo svg, #logo img {
+    display: block;
+    width: auto;
+    height: 50px;
+}
+@media screen and (min-width:1025px) {
+    #logo svg, #logo img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+}
+/* Header Service Area Bar */
+#header-service-area p {
+    margin-bottom: 0;
+}
+/* Contact Bar */
+#header-btn {
+    display: block;
+    text-align: right;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+#header-btn a {
+    padding: 5px 10px;
+    text-align: center;
+    color: #fff;
+    max-width: 160px;
+    margin: 0;
+}
+
+#phone {
+    display: inline-block;
+    line-height: 1;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+#phone-wrap .opensign {
+    display: inline-block;
+    background: #17417c;
+    border-radius: 3px;
+    padding: 7px;
+    vertical-align: middle;
+}
+#phone-wrap .opensign span {
+    font-family: inherit;
+    text-transform: uppercase;
+    display: block;
+    color: #fff;
+}
+
+/* ============================== NAVIGATION ============================== */
+
+/* === Mobile Menu Styling === */
+.oc-item {
+    border-color: #444;
+}
+.oc-item a {
+    color:#fff;
+}
+.oc-item a:hover {
+    color: #fff;
+}
+/* Expanded Menu BG */
+.oc-item ul {
+    background-color: rgba(255,255,255,0.1);
+}
+.oc-item.quote a {
+    background-color: #17417c;
+}
+.oc-item.quote a:hover {
+    background-color: #f5821f;
+}
+.oc-close {
+    color: #fff;
+}
+.oc-close:hover {
+    color: #f5821f;
+}
+
+/* === Main Menu Styling === */
+#nav-bar {
+    background-color: #444;
+}
+.menu-icon {
+    background-color: #17417c;
+}.menu-icon:hover {
+    background-color: #f5821f;
+}
+.menu-icon span {
+    background-color: #fff;
+}
+/* Change color of bars on hover
+.menu-icon:hover span {
+    background-color: #eee;
+} */
+
+/* Top Level Menu Button Styles */
+.nav-item > a {
+    color:#fff;
+    background-color: transparent;
+    font-weight: bold;
+}
+.nav-item > a:hover {
+    background-color:#17417c;
+}
+.nav-item > a:hover {
+    background-color:#17417c;
+}
+/* Nav dropdown lists */
+.nav-item > ul {
+    background-color: #444;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.nav-item > ul a {
+    color:#eee;
+    font-weight: bold;
+}
+.nav-item > ul a:hover {
+    color:#fff;
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* ============================== Main Message ============================== */
+#main-message {
+    height:500px;
+    background-image: url('../img/mm-1.jpg');
+    background-size: cover;
+}
+#main-message .grid-container {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.main-text {
+    padding: 2rem;
+    background-color: rgba(51,51,51,0.8);
+}
+.main-title, .main-subtitle {
+    margin-bottom:0;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.main-title {
+    font-size: 36px;
+}

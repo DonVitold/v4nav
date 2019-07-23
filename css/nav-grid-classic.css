@@ -1,0 +1,93 @@
+/* ==================== Header Layout ==================== */
+/* Logo */
+#logo {
+    grid-area: head-logo;
+}
+/* Service Area */
+#header-service-area {
+    grid-area: head-service;
+}
+#header-service-area p {
+    font-size:14px;
+    text-align: right;
+}
+
+/* Phone & button boxes */
+#phone-wrap {
+    grid-area: head-phone;
+    text-align: center;
+}
+#phone {
+    font-size: 20px;
+}
+#phone-wrap .opensign span {
+    font: 400 14px/100% sans-serif;
+}
+
+#header-btn {
+    grid-area: head-button;
+    text-align: right;
+}
+@media screen and (min-width:520px) {
+    #phone-wrap {
+        text-align: right;
+    }
+}
+@media screen and (min-width:768px) {
+    #phone {
+        font-size: 32px;
+    }
+}
+/*  Navigation  */
+#menu-icon-wrap {
+    grid-area: head-icon;
+    text-align: right;
+}
+#nav-bar {
+    grid-area: head-nav;
+}
+
+/* Grid Settings */
+#header-grid {
+    display:grid;
+    align-items: center;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    grid-template-areas:
+        "head-logo head-logo head-logo head-icon"
+        "head-phone head-phone head-phone head-phone";
+}
+@media screen and (max-width: 1024px) {
+    #header-service-area, #nav-bar, #header-btn {
+        display: none;
+    }
+}
+@media screen and (min-width: 520px) {
+    #header-grid {
+        grid-template-areas:
+            "head-logo head-phone head-phone head-icon";
+    }
+}
+@media screen and (min-width: 1025px) {
+    #menu-icon-wrap { display: none; }
+    #header-grid {
+        grid-template-areas:
+            "head-logo head-service head-service head-service"
+            "head-logo head-phone head-phone head-phone"
+            "head-logo . head-button head-button"
+            "head-nav head-nav head-nav head-nav";
+    }
+    #header.fixed-head #header-grid {
+        grid-template-areas:
+            "head-logo head-phone head-phone head-button"
+            "head-nav head-nav head-nav head-nav";
+    }
+    #header.fixed-head #logo svg {
+        height: 50px;
+        width: auto;
+    }
+    #header.fixed-head #header-service-area {
+        display: none;
+    }
+}

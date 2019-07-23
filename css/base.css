@@ -1,0 +1,226 @@
+/* ============================== COMPONENT STYLES ============================== */
+.has-dropdown {
+    position: relative;
+}
+.super-toggle {
+    display: block;
+    padding: 10px;
+}
+.super-content {
+    display: none;
+    list-style: none;
+}
+.super-content.active {
+    display: block;
+}
+
+.tabs, .acc {
+    margin: 2rem auto;
+}
+/* Arrange tab buttons in a row */
+.tab-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+/* ============================== GENERAL ============================== */
+#template-wrap {
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+/* ============================== HEADER ============================== */
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+#header.fixed-head {
+    position: fixed;
+    -webkit-animation: slideDown 0.3s ease-out;
+    animation: slideDown 0.3s ease-out;
+}
+
+/* ============================== NAVIGATION ============================== */
+
+/* === Mobile Menu Layout === */
+.oc-item.has-dropdown {
+    position: relative;
+}
+.oc-item.has-dropdown::before {
+    content: '\25BE';
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 20px;
+}
+
+.oc-item a {
+    line-height: 20px;
+    display: block;
+    padding: 5px 5px 5px 15px;
+}
+.oc-item > a {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.oc-item.quote {
+    border-bottom: none;
+    margin: 20px 10px 10px;
+}
+.oc-item.quote a {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.oc-item ul {
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1rem 0.5rem 1rem 1.25rem;
+}
+.oc-item ul li a {
+    position: relative;
+}
+.oc-item ul li a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 6px;
+    left: 0;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.oc-item.has-dropdown {
+    position: relative;
+}
+.oc-item.has-dropdown::before {
+    content: '\25BE';
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 20px;
+}
+.oc-item.quote {
+    border-bottom: none;
+    margin: 20px 10px 10px;
+}
+.oc-item.quote a {
+    margin-top: 10px;
+    text-align: center;
+}
+.oc-close {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+.oc-close span {
+    font-size: 32px;
+    position: relative;
+    top: 2px;
+}
+
+/* === Main Menu Layout === */
+.menu-icon {
+    display: inline-block;
+    padding: 6px;
+}
+.menu-icon span {
+    height: 2px;
+    width: 22px;
+    margin: 4px 0;
+    display: block;
+}
+/* Menu Bar Element */
+#nav-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+/* Individual Nav Items */
+#nav-menu .nav-item > a {
+    display: block;
+    padding: 1rem;
+    line-height: 1.25rem;
+}
+/* Dropdown */
+#nav-menu .nav-item > ul {
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left:0;
+    min-width: 300px;
+}
+#nav-menu .nav-item > ul a {
+    display: block;
+    padding: 10px;
+}
+/* ============================== Main Message ============================== */
+#main-message {
+    height:500px;
+    background-image: url('../img/mm-1.jpg');
+    background-size: cover;
+}
+#main-message .grid-container {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+/* ============================== ANIMATIONS ============================== */
+@-webkit-keyframes slideDown {
+    from {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes slideDown {
+    from {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
