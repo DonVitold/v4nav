@@ -63,12 +63,15 @@
     position: relative;
 }
 .oc-item.has-dropdown::before {
-    content: '\25BE';
+    content: '';
     position: absolute;
     right: 20px;
-    top: 8px;
-    color: rgba(255, 255, 255, 0.5);
-    line-height: 20px;
+    top: 12px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
 
 .oc-item a {
@@ -103,32 +106,14 @@
     content: '';
     display: block;
     position: absolute;
-    height: 2px;
+    height: 6px;
     width: 6px;
     left: 0;
     top: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.oc-item.has-dropdown {
-    position: relative;
-}
-.oc-item.has-dropdown::before {
-    content: '\25BE';
-    position: absolute;
-    right: 20px;
-    top: 8px;
-    color: rgba(255, 255, 255, 0.5);
-    line-height: 20px;
-}
-.oc-item.quote {
-    border-bottom: none;
-    margin: 20px 10px 10px;
-}
-.oc-item.quote a {
-    margin-top: 10px;
-    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-width: 2px 2px 0 0;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
 }
 .oc-close {
     font-size: 13px;
@@ -195,9 +180,11 @@
     -webkit-box-direction: normal;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    /* Horizontal Alignment */
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    /* Vertical Alignment */
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
