@@ -539,11 +539,6 @@
                         case 'classic':
                             cssnav.setAttribute('href', 'css/nav-grid-classic.css');
                             console.log('Classic template selected');
-                            if(colorSelect.options[colorSelect.selectedIndex].value == 'light') {
-                                header.style.boxShadow = 'inset 0 -52px #eee';
-                            } else {
-                                header.style.boxShadow = 'inset 0 -52px #222';
-                            }
                             break;
                         case 'condensed':
                             cssnav.setAttribute('href', 'css/nav-grid-condensed.css');
@@ -574,9 +569,15 @@
                     if(selectedValue == 'dark') {
                         cssnavcolor.setAttribute('href', 'css/nav-color-dark.css');
                         console.log('Dark theme selected');
+                        if(layoutSelect.options[layoutSelect.selectedIndex].value == 'narrow') {
+                            header.style.boxShadow = 'inset 0 38px #222';
+                        } 
                     } else {
                         cssnavcolor.setAttribute('href', 'css/nav-color-light.css');
                         console.log('Light theme selected');
+                        if(layoutSelect.options[layoutSelect.selectedIndex].value == 'narrow') {
+                            header.style.boxShadow = 'inset 0 38px #eee';
+                        }
                     }
                 })
             })();
