@@ -108,7 +108,7 @@
                             <a href="/">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90">
                                     <style type="text/css">
-                                    .st0{fill:#17417c;}
+                                    .st0{fill:#f5821f;}
                                     .st1{fill:#FFFFFF;}
                                     </style>
                                     <rect x="0" y="0" class="st0" width="200" height="90"></rect>
@@ -552,9 +552,9 @@
                             cssnav.setAttribute('href', 'css/nav-grid-narrow.css');
                             console.log('Narrow template selected');
                             if(colorSelect.options[colorSelect.selectedIndex].value == 'light' && window.innerWidth >= 1025) {
-                                header.style.boxShadow = 'inset 0 38px #eee';
+                                header.style.boxShadow = 'inset 0 38px #eee, 0 2px 10px rgba(0,0,0,0.2)';
                             } else if(colorSelect.options[colorSelect.selectedIndex].value == 'dark' && window.innerWidth >= 1025) {
-                                header.style.boxShadow = 'inset 0 38px #222';
+                                header.style.boxShadow = 'inset 0 38px #222, 0 2px 10px rgba(0,0,0,0.2)';
                             }
                             break;
                         case 'slim':
@@ -569,19 +569,19 @@
                 })
                 colorSelect.addEventListener('change', function() {
                     var selectedValue = colorSelect.options[colorSelect.selectedIndex].value;
-                    header.style.boxShadow = 'none';
+                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
                     console.log(selectedValue);
                     if(selectedValue == 'dark') {
                         cssnavcolor.setAttribute('href', 'css/nav-color-dark.css');
                         console.log('Dark theme selected');
                         if(layoutSelect.options[layoutSelect.selectedIndex].value == 'narrow') {
-                            header.style.boxShadow = 'inset 0 38px #222';
+                            header.style.boxShadow = 'inset 0 38px #222, 0 2px 10px rgba(0,0,0,0.2)';
                         } 
                     } else {
                         cssnavcolor.setAttribute('href', 'css/nav-color-light.css');
                         console.log('Light theme selected');
                         if(layoutSelect.options[layoutSelect.selectedIndex].value == 'narrow') {
-                            header.style.boxShadow = 'inset 0 38px #eee';
+                            header.style.boxShadow = 'inset 0 38px #eee, 0 2px 10px rgba(0,0,0,0.2)';
                         }
                     }
                 })
