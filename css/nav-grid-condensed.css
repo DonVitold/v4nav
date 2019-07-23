@@ -46,6 +46,9 @@
 #nav-bar {
     grid-area: head-nav;
 }
+#nav-menu {
+    justify-content: flex-end;
+}
 
 /* Grid Settings */
 #header-grid {
@@ -89,5 +92,8 @@
     }
     #header.fixed-head #header-service-area {
         display: none;
+    }
+    #header.fixed-head #nav-menu {
+        justify-content: center;
     }
 }
