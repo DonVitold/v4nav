@@ -4,12 +4,11 @@
     color: #444;
 }
 
-/* ============================== NAVIGATION ============================== */
-
-/* === Mobile Menu Styling === */
+/* ============================== NAVIGATION COLORS ============================== */
 .pushbar {
     background: #fff;
 }
+/* === Mobile Menu Styling === */
 .oc-item {
     border-color: #e6e6e6;
 }
@@ -19,9 +18,12 @@
 .oc-item a:hover {
     color: #f5821f;
 }
-/* Expanded Menu BG */
+/* Expanded Menu Item */
 .oc-item ul {
     background-color: rgba(0,0,0,0.1);
+}
+.oc-item ul li a::before {
+    border-color: rgba(0,0,0,0.4);
 }
 .oc-item.quote a {
     background-color: #17417c;
