@@ -550,9 +550,9 @@
                         case 'narrow':
                             cssnav.setAttribute('href', 'css/nav-grid-narrow.css');
                             console.log('Narrow template selected');
-                            if(colorSelect.options[colorSelect.selectedIndex].value == 'light') {
+                            if(colorSelect.options[colorSelect.selectedIndex].value == 'light' && window.innerWidth >= 1025) {
                                 header.style.boxShadow = 'inset 0 38px #eee';
-                            } else {
+                            } else if(colorSelect.options[colorSelect.selectedIndex].value == 'dark' && window.innerWidth >= 1025) {
                                 header.style.boxShadow = 'inset 0 38px #222';
                             }
                             break;
