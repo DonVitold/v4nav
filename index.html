@@ -538,6 +538,7 @@
                 layoutSelect.addEventListener('change', function() {
                     var selectedValue = layoutSelect.options[layoutSelect.selectedIndex].value;
                     console.log(selectedValue);
+                    header.style.boxShadow = 'none';
                     switch(selectedValue) {
                         case 'classic':
                             cssnav.setAttribute('href', 'css/nav-grid-classic.css');
@@ -568,6 +569,7 @@
                 })
                 colorSelect.addEventListener('change', function() {
                     var selectedValue = colorSelect.options[colorSelect.selectedIndex].value;
+                    header.style.boxShadow = 'none';
                     console.log(selectedValue);
                     if(selectedValue == 'dark') {
                         cssnavcolor.setAttribute('href', 'css/nav-color-dark.css');
