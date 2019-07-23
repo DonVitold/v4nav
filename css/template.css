@@ -187,7 +187,12 @@
     background-image: url('../img/mm-1.jpg');
     background-size: cover;
 }
+#main-message::before {
+    background: -webkit-linear-gradient(top left, #777, #111);
+    background: linear-gradient(to bottom right, #777, #111);
+}
 #main-message .grid-container {
+    /* Horizontal allignment of main message content - left = 'flex-start', center = 'center', right = 'flex-end' */
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
